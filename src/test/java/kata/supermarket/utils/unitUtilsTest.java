@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
 public class unitUtilsTest {
 
     private static Unit UNIT_POUND;
@@ -30,5 +28,15 @@ public class unitUtilsTest {
         //Then
         Assertions.assertEquals(16, resultFromTo);
         Assertions.assertEquals(1, resultToFrom);
+    }
+
+    @Test
+    public void should_return_same_vale_fromAndTo_TheSameUnit() {
+        //Given
+        double toBeConvertedValue = 16 ;
+        //When
+        double result = UnitUtils.convert(toBeConvertedValue, UNIT_POUND, UNIT_POUND);
+        //Then
+        Assertions.assertEquals(toBeConvertedValue, result);
     }
 }
