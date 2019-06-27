@@ -2,11 +2,13 @@ package kata.supermarket.pricing;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import kata.supermarket.Utils.UnitUtils;
 import kata.supermarket.core.Order;
 import kata.supermarket.core.Product;
 import kata.supermarket.core.Unit;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -23,8 +25,8 @@ public class PricingServiceTest {
     private static Unit PRODUCT_UNIT_OUNCE;
     private static Unit PRODUCT_UNIT_POUND;
 
-    @BeforeAll
-    public static void setup() {
+    @BeforeEach
+    public void setup() {
         product = new Product();
         product.setName(PRODUCT_NAME_A);
         product.setPrice(PRODUCT_PRICE_A);
@@ -32,8 +34,8 @@ public class PricingServiceTest {
         PRODUCT_UNIT_OUNCE = new Unit();
         PRODUCT_UNIT_OUNCE.setDescription("ounce");
 
-        PRODUCT_UNIT_OUNCE = new Unit();
-        PRODUCT_UNIT_OUNCE.setDescription("pound");
+        PRODUCT_UNIT_POUND = new Unit();
+        PRODUCT_UNIT_POUND.setDescription("pound");
     }
 
     @Test
@@ -48,7 +50,7 @@ public class PricingServiceTest {
     }
 
     @Test
-    public void should_calculate_order_price_in_different_unit() {
+    public void should_calculate_order_price_in_different_unit() throws Exception{
         //Given
         Product productWithUnit = new Product();
         product.setName(PRODUCT_NAME_A);
@@ -56,11 +58,14 @@ public class PricingServiceTest {
         BigDecimal priceOfOnePound = new BigDecimal(16);
         product.setPrice(priceOfOnePound);
         Order order = new Order();
-        int quantityInOunce = 4;
-        order.addProduct(product, quantityInOunce);
+        double quantityInOunce = 4;
+        order.addProduct(product, UnitUtils.convert(quantityInOunce,PRODUCT_UNIT_OUNCE,PRODUCT_UNIT_POUND));
         //When
         BigDecimal result = pricingService.getOrderTotal(order);
         //Then
         assertThat(result, Matchers.comparesEqualTo(new BigDecimal(4)));
     }
+
+
+
 }

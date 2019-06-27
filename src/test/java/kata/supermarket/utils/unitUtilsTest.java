@@ -22,7 +22,7 @@ public class unitUtilsTest {
     }
 
     @Test
-    public void should_return_value_in_converted_unit() throws Exception{
+    public void should_return_value_in_converted_unit() throws Exception {
         //Given
         //When
         double resultFromTo = UnitUtils.convert(1, UNIT_POUND, UNIT_OUNCE);

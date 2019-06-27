@@ -19,7 +19,7 @@ public class Order {
         this.orderLines = orderLines;
     }
 
-    public void addProduct(Product product, int quantity) {
+    public void addProduct(Product product, double quantity) {
         for (OrderLine orderLine : orderLines) {
             if (orderLine.getProduct().equals(product)) {
                 orderLine.setQuantity(orderLine.getQuantity() + quantity);

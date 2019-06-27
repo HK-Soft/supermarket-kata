@@ -4,7 +4,7 @@ public class OrderLine {
 
     private Product product;
 
-    private int quantity;
+    private double quantity;
 
     public Product getProduct() {
         return product;
@@ -14,11 +14,11 @@ public class OrderLine {
         this.product = product;
     }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 }
