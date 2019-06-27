@@ -7,6 +7,6 @@ import java.math.BigDecimal;
 public class PricingService {
 
     public BigDecimal getOrderTotal(Order order) {
-        return null;
+        return order.getProduct().getPrice().multiply(new BigDecimal(order.getQuantity()));
     }
 }
