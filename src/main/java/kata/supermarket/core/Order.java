@@ -8,7 +8,7 @@ public class Order {
     private List<OrderLine> orderLines;
 
     public Order() {
-       orderLines = new ArrayList<>();
+        orderLines = new ArrayList<>();
     }
 
     public List<OrderLine> getOrderLines() {
@@ -19,10 +19,17 @@ public class Order {
         this.orderLines = orderLines;
     }
 
-    public void addProduct(Product product,int quantity){
+    public void addProduct(Product product, int quantity) {
+        for (OrderLine orderLine : orderLines) {
+            if (orderLine.getProduct().equals(product)) {
+                orderLine.setQuantity(orderLine.getQuantity() + quantity);
+                return;
+            }
+        }
         OrderLine orderLine = new OrderLine();
-        orderLine.setProduct(product);
         orderLine.setQuantity(quantity);
-        this.orderLines.add(orderLine);
+        orderLine.setProduct(product);
+        orderLines.add(orderLine);
+
     }
 }

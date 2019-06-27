@@ -30,7 +30,24 @@ public class OrderTest {
         //When
         order.addProduct(product, PRODUCT_PRICE_QUANTITY_A);
         //Then
-        Assertions.assertEquals(order.getOrderLines().size() , sizeBefore + 1);
-        Assertions.assertEquals(order.getOrderLines().get(sizeBefore).getQuantity(),PRODUCT_PRICE_QUANTITY_A);
+        Assertions.assertEquals(order.getOrderLines().size(), sizeBefore + 1);
+        Assertions.assertEquals(order.getOrderLines().get(sizeBefore).getQuantity(), PRODUCT_PRICE_QUANTITY_A);
     }
+
+    @Test
+    public void should_update_quantity_when_adding_exiting_product() {
+        //Given
+        Order order = new Order();
+        int sizeBefore = order.getOrderLines().size();
+        //When
+        order.addProduct(product, PRODUCT_PRICE_QUANTITY_A);
+        order.addProduct(product, PRODUCT_PRICE_QUANTITY_A);
+        //Then
+        Assertions.assertEquals(order.getOrderLines().size(), sizeBefore + 1);
+        Assertions.assertEquals(order.getOrderLines().get(sizeBefore).getQuantity(),
+                (PRODUCT_PRICE_QUANTITY_A + PRODUCT_PRICE_QUANTITY_A));
+
+    }
+
+
 }
