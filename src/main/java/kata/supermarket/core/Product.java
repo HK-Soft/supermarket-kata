@@ -1,5 +1,6 @@
 package kata.supermarket.core;
 
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -7,6 +8,11 @@ public class Product {
 
     private String name;
     private BigDecimal price;
+    private Unit unit ;
+
+    public Product() {
+        this.unit = new Unit();
+    }
 
     public String getName() {
         return name;
@@ -22,6 +28,14 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Unit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Unit unit) {
+        this.unit = unit;
     }
 
     @Override
