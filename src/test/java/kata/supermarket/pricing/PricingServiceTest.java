@@ -17,6 +17,7 @@ public class PricingServiceTest {
 
     private static final String PRODUCT_NAME_A = "AAAAA" ;
     private static final BigDecimal PRODUCT_PRICE_A = new BigDecimal(10);
+    private static final int PRODUCT_PRICE_QUANTITY_A = 3;
     private static Product product ;
 
     @BeforeAll
@@ -27,17 +28,14 @@ public class PricingServiceTest {
     }
 
     @Test
-    public void should_calculate_one_product_order_total() {
+    public void should_calculate_product_order_total() {
         //Given
         Order order = new Order();
+        order.addProduct(product,PRODUCT_PRICE_QUANTITY_A);
         //When
         BigDecimal result = pricingService.getOrderTotal(order);
         //Then
         assertThat(result,  Matchers.comparesEqualTo(new BigDecimal(20)));
     }
 
-    @Test
-    public void should_calculate_multi_product_order_total() {
-
-    }
 }
