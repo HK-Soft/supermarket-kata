@@ -1,24 +1,28 @@
 package kata.supermarket.core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Order {
 
-    private Product product;
+    private List<OrderLine> orderLines;
 
-    private int quantity;
-
-    public Product getProduct() {
-        return product;
+    public Order() {
+       orderLines = new ArrayList<>();
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public List<OrderLine> getOrderLines() {
+        return orderLines;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public void setOrderLines(List<OrderLine> orderLines) {
+        this.orderLines = orderLines;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void addProduct(Product product,int quantity){
+        OrderLine orderLine = new OrderLine();
+        orderLine.setProduct(product);
+        orderLine.setQuantity(quantity);
+        this.orderLines.add(orderLine);
     }
 }

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676d401a-efa9-49c4-9cd2-4429ec3f401d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/kata/supermarket/order/OrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/test/JUnitTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="72">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#249#250#0" expanded="true" />
@@ -42,13 +46,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="89" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#182#183#0" expanded="true" />
+                <element signature="e#210#211#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,21 +78,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="201">
+              <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding>
-                <element signature="e#143#144#0" expanded="true" />
-                <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#220#221#0" expanded="true" />
-                <element signature="e#258#259#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#166#167#0" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
                 <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#366#367#0" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -94,8 +108,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state relative-caret-position="206">
+              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/order/OrderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,11 +154,13 @@
         <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/test/JUnitTests.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PringService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Product.java" />
-        <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java" />
+        <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/order/OrderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java" />
       </list>
     </option>
   </component>
@@ -173,6 +201,39 @@
               <item name="supermarket-prcing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="supermarket-prcing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="supermarket-prcing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="supermarket-prcing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="supermarket-prcing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="supermarket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="supermarket-prcing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="supermarket-prcing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="supermarket" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="supermarket-prcing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="supermarket-prcing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="supermarket" type="462c0819:PsiDirectoryNode" />
+              <item name="pricing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="supermarket-prcing" type="b2602c69:ProjectViewProjectNode" />
@@ -219,6 +280,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kata.supermarket.core" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -231,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in supermarket-pricing">
+  <component name="RunManager" selected="JUnit.OrderTest.should_add_product_to_order">
     <configuration name="All in supermarket-pricing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="supermarket-pricing" />
       <option name="PACKAGE_NAME" value="" />
@@ -272,6 +338,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderTest.should_add_product_to_order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="supermarket-pricing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kata.supermarket.order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kata.supermarket.order" />
+      <option name="MAIN_CLASS_NAME" value="kata.supermarket.order.OrderTest" />
+      <option name="METHOD_NAME" value="should_add_product_to_order" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PricingServiceTest.should_calculate_order_total" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="supermarket-pricing" />
       <extension name="coverage">
@@ -290,6 +372,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderTest.should_add_product_to_order" />
         <item itemvalue="JUnit.All in supermarket-pricing" />
         <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_total" />
         <item itemvalue="JUnit.JUnitTests.should_alwas_success" />
@@ -315,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561634259728</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="the total for order with one product">
+      <created>1561634432121</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561634432121</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -339,6 +429,12 @@
     </history-entry>
     <history-entry file="All_in_supermarket-pricing - 2019.06.27 at 13h 16m 25s.xml">
       <configuration name="All in supermarket-pricing" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_supermarket-pricing - 2019.06.27 at 13h 19m 51s.xml">
+      <configuration name="All in supermarket-pricing" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderTest_should_add_product_to_order - 2019.06.27 at 13h 36m 11s.xml">
+      <configuration name="OrderTest.should_add_product_to_order" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -367,7 +463,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3285968" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29307282" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37122557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,7 +481,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="testing total for order with one product" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing total for order with one product" />
+    <MESSAGE value="the total for order with one product" />
+    <option name="LAST_COMMIT_MESSAGE" value="the total for order with one product" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/supermarket-pricing.iml">
@@ -395,18 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="378" column="17" selection-start-line="378" selection-start-column="17" selection-end-line="378" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/test/JUnitTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -440,10 +525,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/test/JUnitTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state relative-caret-position="206">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/order/OrderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -452,27 +578,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding>
-            <element signature="e#143#144#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="89" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+        <state relative-caret-position="201">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
           </folding>
         </state>
       </provider>
