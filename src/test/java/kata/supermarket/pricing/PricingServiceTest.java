@@ -48,7 +48,7 @@ public class PricingServiceTest {
     }
 
     @Test
-    public void should_calculate_order_price_with_different_unit() {
+    public void should_calculate_order_price_in_different_unit() {
         //Given
         Product productWithUnit = new Product();
         product.setName(PRODUCT_NAME_A);

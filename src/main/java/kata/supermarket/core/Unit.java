@@ -25,7 +25,7 @@ public class Unit {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Unit unit = (Unit) o;
-        return description.equals(unit.description);
+        return description.equalsIgnoreCase(unit.description);
     }
 
     @Override
