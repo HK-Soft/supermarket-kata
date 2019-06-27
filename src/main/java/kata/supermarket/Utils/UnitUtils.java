@@ -1,5 +1,6 @@
 package kata.supermarket.Utils;
 
+import kata.supermarket.core.Exception.ConversionRuleNotFound;
 import kata.supermarket.core.Unit;
 
 import java.util.ArrayList;
@@ -18,15 +19,19 @@ public class UnitUtils {
         CONVERSION_RULES.add(POUND_TO_OUNCE_RULE);
     }
 
-    public static double convert(double value, Unit from, Unit to) {
-        if(from.equals(to)) return value ;
+    public static double convert(double value, Unit from, Unit to) throws ConversionRuleNotFound {
+        boolean found = false;
         for (ConversionRule rule : CONVERSION_RULES) {
-            if (rule.getFrom().equals(from) && rule.getTo().equals(to))
+            if (rule.getFrom().equals(from) && rule.getTo().equals(to)) {
                 return value * rule.getRate();
-            else if (rule.getFrom().equals(to) && rule.getTo().equals(from))
+            } else if (rule.getFrom().equals(to) && rule.getTo().equals(from)) {
                 return value / rule.getRate();
+            }
+            found = (from.equals(rule.getTo()) || from.equals(rule.getFrom())
+                    || to.equals(rule.getTo()) || to.equals(rule.getFrom()));
         }
-        return 0;
+        if (from.equals(to) && found) return value;
+        throw new ConversionRuleNotFound(from, to);
     }
 }
 
