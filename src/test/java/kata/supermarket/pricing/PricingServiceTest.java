@@ -35,7 +35,7 @@ public class PricingServiceTest {
         //When
         BigDecimal result = pricingService.getOrderTotal(order);
         //Then
-        assertThat(result,  Matchers.comparesEqualTo(new BigDecimal(20)));
+        assertThat(result,  Matchers.comparesEqualTo(new BigDecimal(30)));
     }
 
 }
