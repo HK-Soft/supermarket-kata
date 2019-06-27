@@ -19,6 +19,7 @@ public class UnitUtils {
     }
 
     public static double convert(double value, Unit from, Unit to) {
+        if(from.equals(to)) return value ;
         for (ConversionRule rule : CONVERSION_RULES) {
             if (rule.getFrom().equals(from) && rule.getTo().equals(to))
                 return value * rule.getRate();
