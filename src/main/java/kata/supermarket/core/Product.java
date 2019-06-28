@@ -1,14 +1,21 @@
 package kata.supermarket.core;
 
 
+import kata.supermarket.core.Exception.StrategyAlreadyAssigned;
+import kata.supermarket.pricing.startegy.PriceStrategy;
+
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Product {
 
     private String name;
     private BigDecimal price;
-    private Unit unit ;
+    private Unit unit;
+
+    private List<PriceStrategy> priceStrategies = new ArrayList<>();
 
     public Product() {
         this.unit = new Unit();
@@ -36,6 +43,21 @@ public class Product {
 
     public void setUnit(Unit unit) {
         this.unit = unit;
+    }
+
+    public List<PriceStrategy> getPriceStrategies() {
+        return priceStrategies;
+    }
+
+    public void addStrategy(PriceStrategy priceStrategy) throws StrategyAlreadyAssigned {
+        for (PriceStrategy strategy : priceStrategies)
+            if (strategy.getName().equals(strategy))
+                throw new StrategyAlreadyAssigned();
+        this.priceStrategies.add(priceStrategy);
+    }
+
+    public void removeStrategy(PriceStrategy priceStrategy) {
+        this.priceStrategies.remove(priceStrategy);
     }
 
     @Override
