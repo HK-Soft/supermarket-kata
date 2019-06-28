@@ -19,9 +19,8 @@ public class PricingService {
         BigDecimal total = new BigDecimal(0);
 
         for (final OrderLine orderLine : order.getOrderLines()) {
-            List<PriceStrategy> strategies = new ArrayList<>();
+            List<PriceStrategy> strategies = new ArrayList<>(orderLine.getProduct().getPriceStrategies());
             strategies.add(DEFAULT_PRICING_STRATEGY);
-            Collections.copy(strategies, orderLine.getProduct().getPriceStrategies());
             BigDecimal price = strategies.stream()
                     .min(Comparator.comparing(strategy -> strategy.apply(orderLine.getProduct(), orderLine.getQuantity())))
                     .get()

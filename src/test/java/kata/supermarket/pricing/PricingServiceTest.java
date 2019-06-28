@@ -88,7 +88,7 @@ public class PricingServiceTest {
         BigDecimal YPrice = new BigDecimal(1);
 
         double XProductQuantity = 3;
-        double NProductQuantity = XProductQuantity + 2;
+        double NProductQuantity = 2;
 
         product.setPrice(new BigDecimal(.5));
         product.addStrategy(new XProductForYPriceStrategy(XProductQuantity, YPrice));
@@ -109,8 +109,26 @@ public class PricingServiceTest {
         double quantityOffered = 1;
         product.setPrice(new BigDecimal(1));
         product.addStrategy(new BuyYGetXForFree(quantityBought, quantityOffered));
+        order.addProduct(product, UnitUtils.convert(quantityBought + quantityOffered, product.getUnit(), product.getUnit()));
+        //When
+        BigDecimal resultPrice = pricingService.getOrderTotal(order);
+        //Then
+        assertThat(resultPrice, Matchers.comparesEqualTo(new BigDecimal(2)));
+    }
 
-        order.addProduct(product, UnitUtils.convert((quantityBought + quantityOffered), product.getUnit(), product.getUnit()));
+    @Test
+    public void should_calculate_order_complex_price_offer_Y_for_x_Bought_N_product() throws Exception {
+        //Given
+        Order order = new Order();
+
+        double quantityBought = 2;
+        double quantityOffered = 1;
+        double quantitySoled = 4;
+
+        product.setPrice(new BigDecimal(1));
+        product.addStrategy(new BuyYGetXForFree(quantityBought, quantityOffered));
+
+        order.addProduct(product, UnitUtils.convert(quantitySoled, product.getUnit(), product.getUnit()));
         //When
         BigDecimal resultPrice = pricingService.getOrderTotal(order);
         //Then
