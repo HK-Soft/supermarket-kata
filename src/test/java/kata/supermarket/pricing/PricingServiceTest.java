@@ -6,6 +6,7 @@ import kata.supermarket.Utils.UnitUtils;
 import kata.supermarket.core.Order;
 import kata.supermarket.core.Product;
 import kata.supermarket.core.Unit;
+import kata.supermarket.pricing.startegy.XProductForYPriceStrategy;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -70,14 +71,14 @@ public class PricingServiceTest {
     public void should_calculate_order_complex_price_X_product_for_Y_price() throws Exception {
         //Given
         Order order = new Order();
-        double XProductQuantity = 3 ;
+        double XProductQuantity = 3;
         BigDecimal YPrice = new BigDecimal(1);
+        product.addStrategy(new XProductForYPriceStrategy(XProductQuantity, YPrice));
         order.addProduct(product, UnitUtils.convert(XProductQuantity, product.getUnit(), product.getUnit()));
         //When
         BigDecimal resultPriceForXProduct = pricingService.getOrderTotal(order);
         //Then
         assertThat(resultPriceForXProduct, Matchers.comparesEqualTo(YPrice));
-
     }
 
 }
