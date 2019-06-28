@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676d401a-efa9-49c4-9cd2-4429ec3f401d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Exception/ConversionRuleNotFound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kata/supermarket/Utils/UnitUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/supermarket/Utils/UnitUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/kata/supermarket/utils/unitUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kata/supermarket/utils/unitUtilsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,8 +24,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/utils/unitUtilsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+            <state relative-caret-position="152">
+              <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,19 +48,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Exception/ConversionRuleNotFound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="190">
+              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#166#167#0" expanded="true" />
+                <element signature="e#212#213#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding>
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,11 +94,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/Utils/UnitUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+            <state relative-caret-position="246">
+              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,16 +144,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PringService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java" />
         <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/order/OrderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Product.java" />
-        <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Unit.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Exception/ConversionRuleNotFound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java" />
         <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/utils/unitUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/Utils/UnitUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" />
       </list>
     </option>
   </component>
@@ -287,8 +326,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.unitUtilsTest">
-    <configuration name="PricingServiceTest.should_calculate_order_price_with_different_unit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PricingServiceTest.should_calculate_order_complex_price_X_product_for_Y_price">
+    <configuration name="PricingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="supermarket-pricing" />
       <extension name="coverage">
         <pattern>
@@ -298,7 +337,54 @@
       </extension>
       <option name="PACKAGE_NAME" value="kata.supermarket.pricing" />
       <option name="MAIN_CLASS_NAME" value="kata.supermarket.pricing.PricingServiceTest" />
-      <option name="METHOD_NAME" value="should_calculate_order_price_with_different_unit" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PricingServiceTest.should_calculate_order_complex_price_X_product_for_Y_price" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="supermarket-pricing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kata.supermarket.pricing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kata.supermarket.pricing" />
+      <option name="MAIN_CLASS_NAME" value="kata.supermarket.pricing.PricingServiceTest" />
+      <option name="METHOD_NAME" value="should_calculate_order_complex_price_X_product_for_Y_price" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PricingServiceTest.should_calculate_order_price" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="supermarket-pricing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kata.supermarket.pricing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kata.supermarket.pricing" />
+      <option name="MAIN_CLASS_NAME" value="kata.supermarket.pricing.PricingServiceTest" />
+      <option name="METHOD_NAME" value="should_calculate_order_price" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PricingServiceTest.should_calculate_order_price_in_different_unit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="supermarket-pricing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kata.supermarket.pricing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kata.supermarket.pricing" />
+      <option name="MAIN_CLASS_NAME" value="kata.supermarket.pricing.PricingServiceTest" />
+      <option name="METHOD_NAME" value="should_calculate_order_price_in_different_unit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -319,61 +405,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="unitUtilsTest.should_return_same_vale_fromAndTo_TheSameUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="supermarket-pricing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kata.supermarket.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kata.supermarket.utils" />
-      <option name="MAIN_CLASS_NAME" value="kata.supermarket.utils.unitUtilsTest" />
-      <option name="METHOD_NAME" value="should_return_same_vale_fromAndTo_TheSameUnit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="unitUtilsTest.should_return_value_in_converted_unit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="supermarket-pricing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kata.supermarket.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kata.supermarket.utils" />
-      <option name="MAIN_CLASS_NAME" value="kata.supermarket.utils.unitUtilsTest" />
-      <option name="METHOD_NAME" value="should_return_value_in_converted_unit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="unitUtilsTest.should_throw_exception_conversion_rule_not_found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="supermarket-pricing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kata.supermarket.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kata.supermarket.utils" />
-      <option name="MAIN_CLASS_NAME" value="kata.supermarket.utils.unitUtilsTest" />
-      <option name="METHOD_NAME" value="should_throw_exception_conversion_rule_not_found" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_complex_price_X_product_for_Y_price" />
+        <item itemvalue="JUnit.PricingServiceTest" />
         <item itemvalue="JUnit.unitUtilsTest" />
-        <item itemvalue="JUnit.unitUtilsTest.should_throw_exception_conversion_rule_not_found" />
-        <item itemvalue="JUnit.unitUtilsTest.should_return_same_vale_fromAndTo_TheSameUnit" />
-        <item itemvalue="JUnit.unitUtilsTest.should_return_value_in_converted_unit" />
-        <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_price_with_different_unit" />
+        <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_price" />
+        <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_price_in_different_unit" />
       </list>
     </recent_temporary>
   </component>
@@ -458,39 +496,53 @@
       <option name="project" value="LOCAL" />
       <updated>1561650881994</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="convert when rules does'nt exist">
+      <created>1561652617577</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1561652617577</updated>
+    </task>
+    <task id="LOCAL-00012" summary="use convert rule to update price calculation for product sold in different units">
+      <created>1561653541687</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1561653541687</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="unitUtilsTest_should_return_value_in_converted_unit - 2019.06.27 at 17h 43m 53s.xml">
-      <configuration name="unitUtilsTest.should_return_value_in_converted_unit" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest_should_calculate_order_price - 2019.06.27 at 18h 36m 45s.xml">
+      <configuration name="PricingServiceTest.should_calculate_order_price" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_return_value_in_converted_unit - 2019.06.27 at 17h 52m 09s.xml">
-      <configuration name="unitUtilsTest.should_return_value_in_converted_unit" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest - 2019.06.27 at 18h 37m 10s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_return_same_vale_fromAndTo_TheSameUnit - 2019.06.27 at 17h 52m 20s.xml">
-      <configuration name="unitUtilsTest.should_return_same_vale_fromAndTo_TheSameUnit" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest - 2019.06.27 at 18h 37m 42s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_return_same_vale_fromAndTo_TheSameUnit - 2019.06.27 at 17h 54m 18s.xml">
-      <configuration name="unitUtilsTest.should_return_same_vale_fromAndTo_TheSameUnit" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest - 2019.06.27 at 18h 39m 31s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_return_same_vale_fromAndTo_TheSameUnit - 2019.06.27 at 18h 06m 32s.xml">
-      <configuration name="unitUtilsTest.should_return_same_vale_fromAndTo_TheSameUnit" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest - 2019.06.27 at 18h 40m 22s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_throw_exception_conversion_rule_not_found - 2019.06.27 at 18h 06m 49s.xml">
-      <configuration name="unitUtilsTest.should_throw_exception_conversion_rule_not_found" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest - 2019.06.27 at 18h 41m 11s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_throw_exception_conversion_rule_not_found - 2019.06.27 at 18h 08m 20s.xml">
-      <configuration name="unitUtilsTest.should_throw_exception_conversion_rule_not_found" configurationId="JUnit" />
+    <history-entry file="unitUtilsTest - 2019.06.27 at 18h 42m 40s.xml">
+      <configuration name="unitUtilsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_throw_exception_conversion_rule_not_found - 2019.06.27 at 18h 09m 29s.xml">
-      <configuration name="unitUtilsTest.should_throw_exception_conversion_rule_not_found" configurationId="JUnit" />
+    <history-entry file="unitUtilsTest - 2019.06.27 at 18h 43m 03s.xml">
+      <configuration name="unitUtilsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_throw_exception_conversion_rule_not_found - 2019.06.27 at 18h 13m 47s.xml">
-      <configuration name="unitUtilsTest.should_throw_exception_conversion_rule_not_found" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest - 2019.06.27 at 18h 43m 18s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="unitUtilsTest_should_throw_exception_conversion_rule_not_found - 2019.06.27 at 18h 14m 10s.xml">
-      <configuration name="unitUtilsTest.should_throw_exception_conversion_rule_not_found" configurationId="JUnit" />
+    <history-entry file="PricingServiceTest - 2019.06.28 at 10h 26m 28s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -519,7 +571,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.35523978" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.41030195" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -544,7 +596,9 @@
     <MESSAGE value="calculate total for simple pricing in different unit" />
     <MESSAGE value="create &amp; test conversion for units" />
     <MESSAGE value="convert from and into the same unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert from and into the same unit test" />
+    <MESSAGE value="convert when rules does'nt exist" />
+    <MESSAGE value="use convert rule to update price calculation for product sold in different units" />
+    <option name="LAST_COMMIT_MESSAGE" value="use convert rule to update price calculation for product sold in different units" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/supermarket-pricing.iml">
@@ -581,22 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -619,16 +657,6 @@
             <element signature="e#652#653#0" expanded="true" />
             <element signature="e#725#726#0" expanded="true" />
             <element signature="e#766#767#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="70" selection-start-line="12" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -656,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Unit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -674,27 +695,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="190">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Exception/ConversionRuleNotFound.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/OrderLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="190">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/utils/unitUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        <state relative-caret-position="152">
+          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -703,8 +730,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/Utils/UnitUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        <state relative-caret-position="246">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Exception/ConversionRuleNotFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

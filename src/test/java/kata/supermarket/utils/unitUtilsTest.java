@@ -50,6 +50,6 @@ public class unitUtilsTest {
         double toBeConvertedValue = 16;
         //When //Then
         Assertions.assertThrows(ConversionRuleNotFound.class,
-                () -> UnitUtils.convert(toBeConvertedValue, doesNotExist, doesNotExist));
+                () -> UnitUtils.convert(toBeConvertedValue, doesNotExist, UNIT_OUNCE));
     }
 }

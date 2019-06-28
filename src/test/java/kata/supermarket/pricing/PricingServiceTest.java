@@ -39,10 +39,10 @@ public class PricingServiceTest {
     }
 
     @Test
-    public void should_calculate_order_price() {
+    public void should_calculate_order_price() throws Exception {
         //Given
         Order order = new Order();
-        order.addProduct(product, PRODUCT_PRICE_QUANTITY_A);
+        order.addProduct(product, UnitUtils.convert(PRODUCT_PRICE_QUANTITY_A, product.getUnit(), product.getUnit()));
         //When
         BigDecimal result = pricingService.getOrderTotal(order);
         //Then
@@ -50,7 +50,7 @@ public class PricingServiceTest {
     }
 
     @Test
-    public void should_calculate_order_price_in_different_unit() throws Exception{
+    public void should_calculate_order_price_in_different_unit() throws Exception {
         //Given
         Product productWithUnit = new Product();
         product.setName(PRODUCT_NAME_A);
@@ -59,13 +59,25 @@ public class PricingServiceTest {
         product.setPrice(priceOfOnePound);
         Order order = new Order();
         double quantityInOunce = 4;
-        order.addProduct(product, UnitUtils.convert(quantityInOunce,PRODUCT_UNIT_OUNCE,PRODUCT_UNIT_POUND));
+        order.addProduct(product, UnitUtils.convert(quantityInOunce, PRODUCT_UNIT_OUNCE, product.getUnit()));
         //When
         BigDecimal result = pricingService.getOrderTotal(order);
         //Then
         assertThat(result, Matchers.comparesEqualTo(new BigDecimal(4)));
     }
 
+    @Test
+    public void should_calculate_order_complex_price_X_product_for_Y_price() throws Exception {
+        //Given
+        Order order = new Order();
+        double XProductQuantity = 3 ;
+        BigDecimal YPrice = new BigDecimal(1);
+        order.addProduct(product, UnitUtils.convert(XProductQuantity, product.getUnit(), product.getUnit()));
+        //When
+        BigDecimal resultPriceForXProduct = pricingService.getOrderTotal(order);
+        //Then
+        assertThat(resultPriceForXProduct, Matchers.comparesEqualTo(YPrice));
 
+    }
 
 }
