@@ -24,7 +24,13 @@ public class BuyYGetXForFree implements PriceStrategy {
     @Override
     public BigDecimal apply(Product product, double quantity) {
         double totalQuantity = this.quantityBought + this.quantityOffered;
-        BigDecimal totalPrice = product.getPrice().multiply(new BigDecimal(this.quantityBought ));
-        return new XProductForYPriceStrategy(totalQuantity,totalPrice).apply(product,quantity);
+        BigDecimal result = new BigDecimal(0);
+        double rest = quantity;
+        while ((rest - totalQuantity) >= 0) {
+            result = result.add(product.getPrice().multiply(new BigDecimal(quantityBought)));
+            rest -= totalQuantity;
+        }
+        result.add(product.getPrice().multiply(new BigDecimal(rest)));
+        return result;
     }
 }

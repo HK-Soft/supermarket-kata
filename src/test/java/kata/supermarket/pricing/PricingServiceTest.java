@@ -98,7 +98,7 @@ public class PricingServiceTest {
         //When
         BigDecimal resultPriceForXProduct = pricingService.getOrderTotal(order);
         //Then
-        assertThat(resultPriceForXProduct, Matchers.comparesEqualTo(new BigDecimal(2)));
+        assertThat(resultPriceForXProduct, Matchers.comparesEqualTo(new BigDecimal(1)));
     }
 
     @Test
@@ -127,8 +127,8 @@ public class PricingServiceTest {
 
         product.setPrice(new BigDecimal(1));
         product.addStrategy(new BuyYGetXForFree(quantityBought, quantityOffered));
-
         order.addProduct(product, UnitUtils.convert(quantitySoled, product.getUnit(), product.getUnit()));
+
         //When
         BigDecimal resultPrice = pricingService.getOrderTotal(order);
         //Then

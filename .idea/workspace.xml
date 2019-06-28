@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676d401a-efa9-49c4-9cd2-4429ec3f401d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/BuyYGetXForFree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/BuyYGetXForFree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="132" column="55" lean-forward="true" selection-start-line="132" selection-start-column="55" selection-end-line="132" selection-end-column="55" />
+            <state relative-caret-position="66">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
+            <state relative-caret-position="75">
               <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -68,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/BuyYGetXForFree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+            <state relative-caret-position="165">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,9 +125,9 @@
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/XProductForYPriceStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/SimplePriceStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/core/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/BuyYGetXForFree.java" />
-        <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/BuyYGetXForFree.java" />
       </list>
     </option>
   </component>
@@ -321,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought_N_product">
+  <component name="RunManager" selected="JUnit.PricingServiceTest">
     <configuration name="PricingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="supermarket-pricing" />
       <extension name="coverage">
@@ -403,10 +402,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PricingServiceTest" />
         <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought_N_product" />
         <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" />
         <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_complex_price_X_product_for_Y_price_for_N_product" />
-        <item itemvalue="JUnit.PricingServiceTest" />
         <item itemvalue="JUnit.PricingServiceTest.should_calculate_order_complex_price_X_product_for_Y_price" />
       </list>
     </recent_temporary>
@@ -534,28 +533,17 @@
       <option name="project" value="LOCAL" />
       <updated>1561738359457</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="implementing Buy X product get Y for free price strategy N product">
+      <created>1561740960115</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1561740960115</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought - 2019.06.28 at 18h 43m 12s.xml">
-      <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought - 2019.06.28 at 18h 44m 04s.xml">
-      <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought - 2019.06.28 at 18h 45m 55s.xml">
-      <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought - 2019.06.28 at 18h 47m 10s.xml">
-      <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought - 2019.06.28 at 18h 49m 02s.xml">
-      <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought - 2019.06.28 at 18h 49m 30s.xml">
-      <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought - 2019.06.28 at 18h 50m 50s.xml">
       <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought" configurationId="JUnit" />
     </history-entry>
@@ -567,6 +555,24 @@
     </history-entry>
     <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought_N_product - 2019.06.28 at 18h 53m 48s.xml">
       <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought_N_product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PricingServiceTest_should_calculate_order_complex_price_offer_Y_for_x_Bought_N_product - 2019.06.28 at 18h 54m 16s.xml">
+      <configuration name="PricingServiceTest.should_calculate_order_complex_price_offer_Y_for_x_Bought_N_product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PricingServiceTest - 2019.06.28 at 19h 02m 50s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PricingServiceTest - 2019.06.28 at 19h 04m 36s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PricingServiceTest - 2019.06.28 at 19h 05m 08s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PricingServiceTest - 2019.06.28 at 19h 06m 00s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PricingServiceTest - 2019.06.28 at 19h 06m 45s.xml">
+      <configuration name="PricingServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -595,7 +601,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.41740674" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.5559503" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -626,7 +632,8 @@
     <MESSAGE value="add price strategy &amp; test simple pricing work with new implementation" />
     <MESSAGE value="implementing X product for Y price strategy" />
     <MESSAGE value="implementing Buy X product get Y for free price strategy test" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing Buy X product get Y for free price strategy test" />
+    <MESSAGE value="implementing Buy X product get Y for free price strategy N product" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing Buy X product get Y for free price strategy N product" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/supermarket-pricing.iml">
@@ -797,16 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/SimplePriceStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/core/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -817,10 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/BuyYGetXForFree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/SimplePriceStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+        <state relative-caret-position="17">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -829,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/kata/supermarket/pricing/PricingServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="132" column="55" lean-forward="true" selection-start-line="132" selection-start-column="55" selection-end-line="132" selection-end-column="55" />
+        <state relative-caret-position="66">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -839,8 +836,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/PricingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="75">
           <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kata/supermarket/pricing/startegy/BuyYGetXForFree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
