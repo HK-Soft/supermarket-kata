@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Product {
+public abstract class Product {
 
     private String name;
     private BigDecimal price;

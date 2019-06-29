@@ -3,13 +3,13 @@ package kata.supermarket.pricing;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import kata.supermarket.Utils.UnitUtils;
+import kata.supermarket.core.*;
 import kata.supermarket.core.Order;
-import kata.supermarket.core.Product;
-import kata.supermarket.core.Unit;
 import kata.supermarket.pricing.startegy.BuyYGetXForFree;
 import kata.supermarket.pricing.startegy.XProductForYPriceStrategy;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.*;
+import sun.reflect.generics.tree.Wildcard;
 
 import java.math.BigDecimal;
 
@@ -19,17 +19,11 @@ public class PricingServiceTest {
 
     private static final String PRODUCT_NAME_A = "AAAAA";
     private static final BigDecimal PRODUCT_PRICE_A = new BigDecimal(10);
-    private static final int PRODUCT_PRICE_QUANTITY_A = 3;
-    private static Product product;
     private static Unit PRODUCT_UNIT_OUNCE;
     private static Unit PRODUCT_UNIT_POUND;
 
     @BeforeEach
     public void setup() {
-        product = new Product();
-        product.setName(PRODUCT_NAME_A);
-        product.setPrice(PRODUCT_PRICE_A);
-
         PRODUCT_UNIT_OUNCE = new Unit();
         PRODUCT_UNIT_OUNCE.setDescription("ounce");
 
@@ -37,28 +31,58 @@ public class PricingServiceTest {
         PRODUCT_UNIT_POUND.setDescription("pound");
     }
 
+
+    private WeightedProduct getWeightedProduct() {
+        WeightedProduct product = new WeightedProduct();
+        product.setName(PRODUCT_NAME_A);
+        product.setPrice(PRODUCT_PRICE_A);
+        return product;
+    }
+
+    private QuantifiedProduct getQuantifiedProduct() {
+        QuantifiedProduct product = new QuantifiedProduct();
+        product.setName(PRODUCT_NAME_A);
+        product.setPrice(PRODUCT_PRICE_A);
+        return product;
+    }
+
     @Test
-    public void should_calculate_order_price() throws Exception {
+    public void should_calculate_order_price_for_weighted_product() throws Exception {
         //Given
         Order order = new Order();
-        order.addProduct(product, UnitUtils.convert(PRODUCT_PRICE_QUANTITY_A, product.getUnit(), product.getUnit()));
+        WeightedProduct product = getWeightedProduct();
+        double quantity = 1.5;
+        order.addProduct(product, UnitUtils.convert(quantity, product.getUnit(), product.getUnit()));
         //When
         BigDecimal result = pricingService.getOrderTotal(order);
         //Then
-        assertThat(result, Matchers.comparesEqualTo(new BigDecimal(30)));
+        assertThat(result, Matchers.comparesEqualTo(new BigDecimal(15)));
+    }
+
+    @Test
+    public void should_calculate_order_price_for_quantified_product() throws Exception {
+        //Given
+        Order order = new Order();
+        QuantifiedProduct product = getQuantifiedProduct();
+        int quantity = 2;
+        order.addProduct(product, (int) UnitUtils.convert(quantity, product.getUnit(), product.getUnit()));
+        //When
+        BigDecimal result = pricingService.getOrderTotal(order);
+        //Then
+        assertThat(result, Matchers.comparesEqualTo(new BigDecimal(20)));
     }
 
     @Test
     public void should_calculate_order_price_in_different_unit() throws Exception {
         //Given
-        Product productWithUnit = new Product();
-        product.setName(PRODUCT_NAME_A);
-        product.setUnit(PRODUCT_UNIT_POUND);
+        WeightedProduct productWithUnit = new WeightedProduct();
+        productWithUnit.setName(PRODUCT_NAME_A);
+        productWithUnit.setUnit(PRODUCT_UNIT_POUND);
         BigDecimal priceOfOnePound = new BigDecimal(16);
-        product.setPrice(priceOfOnePound);
+        productWithUnit.setPrice(priceOfOnePound);
         Order order = new Order();
         double quantityInOunce = 4;
-        order.addProduct(product, UnitUtils.convert(quantityInOunce, PRODUCT_UNIT_OUNCE, product.getUnit()));
+        order.addProduct(productWithUnit, UnitUtils.convert(quantityInOunce, PRODUCT_UNIT_OUNCE, productWithUnit.getUnit()));
         //When
         BigDecimal result = pricingService.getOrderTotal(order);
         //Then
@@ -71,6 +95,7 @@ public class PricingServiceTest {
         Order order = new Order();
         double XProductQuantity = 3;
         BigDecimal YPrice = new BigDecimal(1);
+        WeightedProduct product = getWeightedProduct();
         product.addStrategy(new XProductForYPriceStrategy(XProductQuantity, YPrice));
         order.addProduct(product, UnitUtils.convert(XProductQuantity, product.getUnit(), product.getUnit()));
         //When
@@ -79,6 +104,7 @@ public class PricingServiceTest {
         assertThat(resultPriceForXProduct, Matchers.comparesEqualTo(YPrice));
     }
 
+
     @Test
     public void should_calculate_order_complex_price_X_product_for_Y_price_for_N_product() throws Exception {
         //Given
@@ -86,7 +112,7 @@ public class PricingServiceTest {
 
         double XProductQuantity = 3;
         double NProductQuantity = 2;
-
+        WeightedProduct product = getWeightedProduct();
         product.setPrice(new BigDecimal(.5));
         product.addStrategy(new XProductForYPriceStrategy(XProductQuantity, YPrice));
 
@@ -104,9 +130,10 @@ public class PricingServiceTest {
         Order order = new Order();
         double quantityBought = 2;
         double quantityOffered = 1;
+        QuantifiedProduct product = getQuantifiedProduct();
         product.setPrice(new BigDecimal(1));
         product.addStrategy(new BuyYGetXForFree(quantityBought, quantityOffered));
-        order.addProduct(product, UnitUtils.convert(quantityBought + quantityOffered, product.getUnit(), product.getUnit()));
+        order.addProduct(product, (int) UnitUtils.convert(quantityBought + quantityOffered, product.getUnit(), product.getUnit()));
         //When
         BigDecimal resultPrice = pricingService.getOrderTotal(order);
         //Then
@@ -121,27 +148,14 @@ public class PricingServiceTest {
         double quantityBought = 2;
         double quantityOffered = 1;
         double quantitySoled = 4;
-
+        QuantifiedProduct product = getQuantifiedProduct();
         product.setPrice(new BigDecimal(1));
         product.addStrategy(new BuyYGetXForFree(quantityBought, quantityOffered));
-        order.addProduct(product, UnitUtils.convert(quantitySoled, product.getUnit(), product.getUnit()));
+        order.addProduct(product, (int) UnitUtils.convert(quantitySoled, product.getUnit(), product.getUnit()));
 
         //When
         BigDecimal resultPrice = pricingService.getOrderTotal(order);
         //Then
         assertThat(resultPrice, Matchers.comparesEqualTo(new BigDecimal(2)));
-    }
-
-    @Test
-    public void should_fail_when_uings_decimal_value_for_unit_product() throws Exception {
-        //Given
-        Order order = new Order();
-        double invalidQuantityForProductUnit = 1.5d ;
-        Unit unit = new Unit();
-        unit.setDescription("Unit");
-        product.setUnit(unit);
-        order.addProduct(product, UnitUtils.convert(invalidQuantityForProductUnit, product.getUnit(), product.getUnit()));
-        //When //Then
-        Assertions.assertThrows(Exception.class, () -> pricingService.getOrderTotal(order));
     }
 }

@@ -19,7 +19,17 @@ public class Order {
         this.orderLines = orderLines;
     }
 
-    public void addProduct(Product product, double quantity) {
+    public void addProduct(WeightedProduct product, double quantity) {
+        System.out.println(product + " " + "add weighted product");
+        this.addProduct((Product) product, quantity);
+    }
+
+    public void addProduct(QuantifiedProduct product, int quantity) {
+        System.out.println(product + " " + "add quantified product");
+        this.addProduct((Product) product, quantity);
+    }
+
+    private void addProduct(Product product, double quantity) {
         for (OrderLine orderLine : orderLines) {
             if (orderLine.getProduct().equals(product)) {
                 orderLine.setQuantity(orderLine.getQuantity() + quantity);
