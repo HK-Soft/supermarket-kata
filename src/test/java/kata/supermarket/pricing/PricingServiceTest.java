@@ -9,10 +9,7 @@ import kata.supermarket.core.Unit;
 import kata.supermarket.pricing.startegy.BuyYGetXForFree;
 import kata.supermarket.pricing.startegy.XProductForYPriceStrategy;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;
 
@@ -133,5 +130,18 @@ public class PricingServiceTest {
         BigDecimal resultPrice = pricingService.getOrderTotal(order);
         //Then
         assertThat(resultPrice, Matchers.comparesEqualTo(new BigDecimal(2)));
+    }
+
+    @Test
+    public void should_fail_when_uings_decimal_value_for_unit_product() throws Exception {
+        //Given
+        Order order = new Order();
+        double invalidQuantityForProductUnit = 1.5d ;
+        Unit unit = new Unit();
+        unit.setDescription("Unit");
+        product.setUnit(unit);
+        order.addProduct(product, UnitUtils.convert(invalidQuantityForProductUnit, product.getUnit(), product.getUnit()));
+        //When //Then
+        Assertions.assertThrows(Exception.class, () -> pricingService.getOrderTotal(order));
     }
 }
