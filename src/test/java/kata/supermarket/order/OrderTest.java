@@ -1,9 +1,9 @@
 package kata.supermarket.order;
 
-import kata.supermarket.Utils.UnitUtils;
-import kata.supermarket.core.*;
+import kata.supermarket.domain.Order;
+import kata.supermarket.domain.QuantifiedProduct;
+import kata.supermarket.domain.WeightedProduct;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -37,7 +37,7 @@ public class OrderTest {
         order.addProduct(getWeightedProduct(), PRODUCT_PRICE_QUANTITY_A);
         //Then
         Assertions.assertEquals(order.getOrderLines().size(), sizeBefore + 1);
-        Assertions.assertEquals(order.getOrderLines().get(sizeBefore).getQuantity(), PRODUCT_PRICE_QUANTITY_A);
+        Assertions.assertEquals(order.getOrderLines().stream().skip(sizeBefore).findFirst().get().getQuantity(), PRODUCT_PRICE_QUANTITY_A);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class OrderTest {
         order.addProduct(getQuantifiedProduct(), PRODUCT_PRICE_QUANTITY_A);
         //Then
         Assertions.assertEquals(order.getOrderLines().size(), sizeBefore + 1);
-        Assertions.assertEquals(order.getOrderLines().get(sizeBefore).getQuantity(), PRODUCT_PRICE_QUANTITY_A);
+        Assertions.assertEquals(order.getOrderLines().stream().skip(sizeBefore).findFirst().get().getQuantity(), PRODUCT_PRICE_QUANTITY_A);
     }
 
     @Test
@@ -62,7 +62,7 @@ public class OrderTest {
         order.addProduct(getWeightedProduct(), PRODUCT_PRICE_QUANTITY_A);
         //Then
         Assertions.assertEquals(order.getOrderLines().size(), sizeBefore + 1);
-        Assertions.assertEquals(order.getOrderLines().get(sizeBefore).getQuantity(),
+        Assertions.assertEquals(order.getOrderLines().stream().skip(sizeBefore).findFirst().get().getQuantity(),
                 (PRODUCT_PRICE_QUANTITY_A + PRODUCT_PRICE_QUANTITY_A));
 
     }

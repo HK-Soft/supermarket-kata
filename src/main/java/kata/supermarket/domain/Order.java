@@ -1,21 +1,22 @@
-package kata.supermarket.core;
+package kata.supermarket.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Set;
 
 public class Order {
 
-    private List<OrderLine> orderLines;
+    private Set<OrderLine> orderLines;
 
     public Order() {
-        orderLines = new ArrayList<>();
+        orderLines = new HashSet<OrderLine>();
     }
 
-    public List<OrderLine> getOrderLines() {
+    public Set<OrderLine> getOrderLines() {
         return orderLines;
     }
 
-    public void setOrderLines(List<OrderLine> orderLines) {
+    public void setOrderLines(Set<OrderLine> orderLines) {
         this.orderLines = orderLines;
     }
 

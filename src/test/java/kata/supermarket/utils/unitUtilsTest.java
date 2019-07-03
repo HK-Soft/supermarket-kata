@@ -2,7 +2,7 @@ package kata.supermarket.utils;
 
 import kata.supermarket.Utils.UnitUtils;
 import kata.supermarket.core.Exception.ConversionRuleNotFound;
-import kata.supermarket.core.Unit;
+import kata.supermarket.domain.Unit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

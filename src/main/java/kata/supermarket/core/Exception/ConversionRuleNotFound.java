@@ -1,6 +1,6 @@
 package kata.supermarket.core.Exception;
 
-import kata.supermarket.core.Unit;
+import kata.supermarket.domain.Unit;
 
 public class ConversionRuleNotFound extends Exception {
 

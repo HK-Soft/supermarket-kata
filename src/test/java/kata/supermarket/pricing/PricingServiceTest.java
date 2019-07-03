@@ -3,13 +3,14 @@ package kata.supermarket.pricing;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import kata.supermarket.Utils.UnitUtils;
-import kata.supermarket.core.*;
-import kata.supermarket.core.Order;
+import kata.supermarket.domain.Order;
+import kata.supermarket.domain.QuantifiedProduct;
+import kata.supermarket.domain.Unit;
+import kata.supermarket.domain.WeightedProduct;
 import kata.supermarket.pricing.startegy.BuyYGetXForFree;
 import kata.supermarket.pricing.startegy.XProductForYPriceStrategy;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.*;
-import sun.reflect.generics.tree.Wildcard;
 
 import java.math.BigDecimal;
 

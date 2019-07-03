@@ -1,4 +1,4 @@
-package kata.supermarket.core;
+package kata.supermarket.domain;
 
 
 import kata.supermarket.core.Exception.StrategyAlreadyAssigned;

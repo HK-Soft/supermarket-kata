@@ -1,7 +1,7 @@
 package kata.supermarket.Utils;
 
 import kata.supermarket.core.Exception.ConversionRuleNotFound;
-import kata.supermarket.core.Unit;
+import kata.supermarket.domain.Unit;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package kata.supermarket.pricing.startegy;
 
-import kata.supermarket.core.Product;
+import kata.supermarket.domain.Product;
 
 import java.math.BigDecimal;
 import java.util.Objects;

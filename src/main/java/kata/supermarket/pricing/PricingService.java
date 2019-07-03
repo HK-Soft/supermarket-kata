@@ -1,13 +1,12 @@
 package kata.supermarket.pricing;
 
-import kata.supermarket.core.Order;
-import kata.supermarket.core.OrderLine;
+import kata.supermarket.domain.Order;
+import kata.supermarket.domain.OrderLine;
 import kata.supermarket.pricing.startegy.PriceStrategy;
 import kata.supermarket.pricing.startegy.SimplePriceStrategy;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
