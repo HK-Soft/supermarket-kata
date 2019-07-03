@@ -15,17 +15,16 @@ public class PricingService {
     private static final PriceStrategy DEFAULT_PRICING_STRATEGY = new SimplePriceStrategy();
 
     public BigDecimal getOrderTotal(Order order) {
-        BigDecimal total = new BigDecimal(0);
-
-        for (final OrderLine orderLine : order.getOrderLines()) {
-            List<PriceStrategy> strategies = new ArrayList<>(orderLine.getProduct().getPriceStrategies());
-            strategies.add(DEFAULT_PRICING_STRATEGY);
-            BigDecimal price = strategies.stream()
-                    .min(Comparator.comparing(strategy -> strategy.apply(orderLine.getProduct(), orderLine.getQuantity())))
-                    .get()
-                    .apply(orderLine.getProduct(), orderLine.getQuantity()); // BigDecimal;
-            total = total.add(price);
-        }
-        return total;
+        return order.getOrderLines()
+                .stream()
+                .map(orderLine -> {
+                    List<PriceStrategy> strategies = new ArrayList<>(orderLine.getProduct().getPriceStrategies());
+                    strategies.add(DEFAULT_PRICING_STRATEGY);
+                    return strategies.stream()
+                            .min(Comparator.comparing(strategy -> strategy.apply(orderLine.getProduct(), orderLine.getQuantity())))
+                            .get()
+                            .apply(orderLine.getProduct(), orderLine.getQuantity()); // BigDecim
+                })
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 }
